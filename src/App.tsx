@@ -59,7 +59,11 @@ function App() {
       <section>
         <h2>Lista de elemetos</h2>
         <ul>
-          {items.map((item) => {
+          {
+            items.length === 0 ? (<p><strong>No hay elementos en la lista</strong></p>):(
+
+
+          items.map((item) => {
             return (
               <li key={item.id}>
                 {item.text}
@@ -76,7 +80,7 @@ function App() {
                 </button>
               </li>
             );
-          })}
+          }))} 
         </ul>
       </section>
     </main>
